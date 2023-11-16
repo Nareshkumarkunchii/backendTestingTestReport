@@ -710,18 +710,15 @@
 							"script": {
 								"id": "4decf96f-783a-4527-95b9-88b40b9fe6c8",
 								"exec": [
-									"",
 									"pm.test(\"Response status code is 200\", function () {",
 									"  pm.expect(pm.response.code).to.equal(200);",
 									"});",
-									"",
 									"",
 									"pm.test(\"Validate the 'orders' array is present and contains at least one element\", function () {",
 									"    const responseData = pm.response.json();",
 									"",
 									"    pm.expect(responseData.orders).to.exist.and.to.be.an('array').that.is.not.empty;",
 									"});",
-									"",
 									"",
 									"pm.test(\"Validate the 'product' field in each order is a non-empty string\", function () {",
 									"    const responseData = pm.response.json();",
@@ -734,7 +731,6 @@
 									"    });",
 									"});",
 									"",
-									"",
 									"pm.test(\"Validate the deliveryDate field in each order is a non-empty string\", function () {",
 									"  const responseData = pm.response.json();",
 									"",
@@ -744,8 +740,16 @@
 									"  responseData.orders.forEach(function(order) {",
 									"    pm.expect(order.deliveryDate).to.be.a('string').and.to.have.lengthOf.at.least(1, \"deliveryDate should be a non-empty string\");",
 									"  });",
-									""
+									"});"
 								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "9ccad3f0-bc1a-4f94-bf33-578afecf2de9",
+								"exec": [],
 								"type": "text/javascript"
 							}
 						}
