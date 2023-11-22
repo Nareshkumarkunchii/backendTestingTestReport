@@ -124,7 +124,9 @@
 							"listen": "prerequest",
 							"script": {
 								"id": "bddf5a5c-72f4-4c9d-871c-f8328f363230",
-								"exec": [],
+								"exec": [
+									""
+								],
 								"type": "text/javascript"
 							}
 						}
@@ -155,6 +157,10 @@
 								"type": "text"
 							}
 						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "https://cartify.p.rapidapi.com/products?name=iphone&category=mobiles",
 							"protocol": "https",
@@ -170,13 +176,11 @@
 							"query": [
 								{
 									"key": "name",
-									"value": "iphone",
-									"type": "text"
+									"value": "iphone"
 								},
 								{
 									"key": "category",
-									"value": "mobiles",
-									"type": "text"
+									"value": "mobiles"
 								}
 							]
 						}
